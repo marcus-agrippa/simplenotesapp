@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/3b60ca4704.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Notes App</title>
+</head>
+<body>
+  <div class="container">
+    <div class="note-input">
+      <form id="note-form">
+        <div class="input-field">
+          <input type="text" name="Note" id="new-note" placeholder="Add new note...">
+        </div>
+        <input type="submit" value="Add Note" class="btn">
+      </form>
+    </div>
+
+    <div class="notes-heading">
+      <h1>Notes Board</h1>
+    </div>
+
+    <div id="notes-container" class="notes-container">
+    </div>
+    <div class="clear-btn">
+      <a href="#" id="clear-all-btn" class="btn">Clear All</a>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

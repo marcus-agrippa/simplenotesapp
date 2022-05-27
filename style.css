@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+  --background-color: #D9AFD9;
+  --dark-font-color: #333;
+  --light-font-color: #fff;
+  --dark-bg-color: #333;
+  --light-bg-color: #fff;
+  --transform-scale: scale(0.95);
+  --note-box-bg-color: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--background-color);
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  color: var(--font-color);
+}
+
+/* Buttons */
+
+#clear-all-btn {
+  background-color: var(--dark-bg-color);
+  color: var(--light-font-color);
+  padding: 10px 15px;
+  
+}
+
+.btn {
+  background-color: var(--dark-bg-color);
+  color: var(--light-font-color);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  margin: 2rem 1rem;
+  border: none;
+  display: inline-block;
+}
+
+.btn:active {
+  transform: var(--transform-scale);
+}
+
+/* Containers */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.note-box {
+  background-color: var(--note-box-bg-color);
+  color: var(--font-color);
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  margin: 1rem 2rem;
+  max-width: 225px;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.note-box:hover {
+  background-color: var(--dark-bg-color);
+  color: var(--light-font-color);
+  cursor: pointer;
+}
+
+.note-box:active {
+  transform: var(--transform-scale);
+}
+
+/* Inputs */
+
+.note-input input {
+  background-color: var(--note-box-bg-color);
+  color: var(--dark-font-color);
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  margin: 2rem 0;
+  font-size: 1.4rem;
+}
+
+.note-input input:hover {
+  border: none;
+}
+
+.note-input input:focus {
+  border: 3px solid var(--dark-bg-color);
+}
+
+.note-input input:active {
+  transform: var(--transform-scale);
+}
+
+.note-input input:hover {
+  cursor: pointer;
+}
+
+/* Headings and Font */
+
+.notes-heading h1 {
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+
+.note-box h3,
+.note-box p {
+  margin: 1rem 0;
+}
+
+/* Responsiveness */
+
+@media (max-width: 800px) {
+
+  .notes-container {
+    flex-direction: column;
+  }
+
+  .container {
+    height: 100%;
+    min-height: 100vh;
+  }
+}
